@@ -12,9 +12,7 @@ use App\Http\Livewire\Auth\Logout;
 Route::group(['middleware' => 'guest'], function () {
     Route::get('/login', Login::class)->name('login');
     Route::get('/register', Register::class)->name('register');
-    Route::get('/', function () {
-        return view('welcome');
-    });
+    Route::get('/', Login::class)->name('login');
 });
 
 
